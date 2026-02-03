@@ -51,7 +51,7 @@ fi
 
 Запись в системном журнале, что бэкап успешно выполнене
 
-![Backup](backupres/png)
+![Backup](backupres.png)
 
 И задача в crontab
 
