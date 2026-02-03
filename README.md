@@ -29,3 +29,23 @@
 ![Результат](ls.png)
 
 ## Задание 2
+
+Скрипт для синхронизации
+
+```
+#!/bin/bash
+
+SRC="/home/$USER/"
+DST="/tmp/backup/"
+LOG_TAG="home_backup"
+
+rsync -a --delete --checksum --exclude='*/.*' "$SRC" "$DST"
+
+if [ $? -eq 0 ]; then
+    logger -t "$LOG_TAG" "Backup completed successfully"
+else
+    logger -t "$LOG_TAG" "Backup FAILED"
+fi
+
+```
+
